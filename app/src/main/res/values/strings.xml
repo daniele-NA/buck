@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name" translatable="false">Buck</string>
+    <string name="subtitle">Your invisible AI writing assistant</string>
+    <string name="service_enabled">Service enabled</string>
+    <string name="service_disabled">Service disabled</string>
+    <string name="trigger_key_label">Trigger key</string>
+    <string name="how_it_works">How it works</string>
+    <string name="how_it_works_body">Type in any app and add %1$s to trigger Buck.\nYour text will be rewritten in real time.</string>
+    <string name="btn_accessibility_settings">Accessibility Settings</string>
+    <string name="btn_enable_service">Enable Accessibility Service</string>
+    <string name="writing_enabled">Writing active</string>
+    <string name="writing_disabled">Writing paused</string>
+    <string name="service_description">Buck monitors text fields to detect the trigger key, then rewrites your text using AI in real time.</string>
+    <string name="dialog_service_required_title">Service not active</string>
+    <string name="dialog_service_required_body">You need to enable the Accessibility Service before activating writing.</string>
+    <string name="dialog_open_settings">Open Settings</string>
+    <string name="dialog_dismiss">Cancel</string>
+</resources>

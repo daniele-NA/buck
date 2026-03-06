@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="subtitle">Il tuo assistente di scrittura AI invisibile</string>
+    <string name="service_enabled">Servizio attivo</string>
+    <string name="service_disabled">Servizio disattivo</string>
+    <string name="trigger_key_label">Chiave di attivazione</string>
+    <string name="how_it_works">Come funziona</string>
+    <string name="how_it_works_body">Scrivi in qualsiasi app e aggiungi %1$s per attivare Buck.\nIl testo verrà riscritto in tempo reale.</string>
+    <string name="btn_accessibility_settings">Impostazioni accessibilità</string>
+    <string name="btn_enable_service">Abilita servizio accessibilità</string>
+    <string name="writing_enabled">Scrittura attiva</string>
+    <string name="writing_disabled">Scrittura in pausa</string>
+    <string name="service_description">Buck monitora i campi di testo per rilevare la chiave di attivazione, quindi riscrive il testo usando l\'AI in tempo reale.</string>
+    <string name="dialog_service_required_title">Servizio non attivo</string>
+    <string name="dialog_service_required_body">Devi abilitare il servizio di accessibilità prima di attivare la scrittura.</string>
+    <string name="dialog_open_settings">Apri impostazioni</string>
+    <string name="dialog_dismiss">Annulla</string>
+</resources>
