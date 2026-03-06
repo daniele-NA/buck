@@ -27,7 +27,18 @@ class MainViewModel(app: Application) : AndroidViewModel(app) {
         .stateIn(viewModelScope, SharingStarted.WhileSubscribed(5000), false)
 
     fun refreshServiceStatus() {
-        serviceEnabled.value = am.isServiceEnabled(BuckService::class.java)
+        val wasEnabled = serviceEnabled.value
+        val isEnabled = am.isServiceEnabled(BuckService::class.java)
+        serviceEnabled.value = isEnabled
+
+        viewModelScope.launch {
+            when {
+                // == SERVICE JUST ENABLED -> AUTO-ACTIVATE WRITING == //
+                !wasEnabled && isEnabled -> prefsRepo.setWritingEnabled(true)
+                // == SERVICE DISABLED BUT WRITING STILL ON -> FORCE OFF == //
+                !isEnabled && writingEnabled.value -> prefsRepo.setWritingEnabled(false)
+            }
+        }
     }
 
     fun toggleWriting() {
